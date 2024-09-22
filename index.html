@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id = 'post-btn'> POST </button>
+
+
+  <script>
+    document.getElementById('post-btn').addEventListener("click", function () {
+ /*        fetch("http://127.0.0.1:3300/adduser",
+        {
+          method:'POST',
+          body: JSON.stringify({
+               "mobile":1234567896101,
+              "email":"test@gmail.com1s",
+               "userName":"sathish kumar"
+          })
+        }
+        )
+        .then((response)=>response.json())
+        .then((json)=>console.log(json)); */
+      
+        fetch("https://webserver-jxzi.onrender.com/adduser",
+        {
+          method:'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+               "mobile":123456789610123,
+              "email":"test@gmail.com1s23",
+               "userName":"sathish kumar"
+          },
+        )
+        }
+        )
+        .then((response)=>response.json())
+        .then((json)=>console.log(json)); 
+    
+      })
+  </script>
+
+</body>
+</html>
+
+<!-- 
+https://webserver-jxzi.onrender.com/adduser
+
+-->
